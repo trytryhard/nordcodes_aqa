@@ -35,3 +35,30 @@
 1. Скачать trace-архив с allure-отчета или открыть директорию `artifacts`
 2. Открыть trace-архив `playwright show-trace 'путь до trace-архива'`
 Документация: [Trace viewer (playwright.dev)](https://playwright.dev/python/docs/trace-viewer)
+
+---
+## Схема директории
+
+### ./
+[test_task.md](test_task.md) - тестовое задание  
+[requirements-pw.txt](requirements-pw.txt) - зависимости директории `playwright_part`
+---
+
+### ./pages
+[pages](pages) : размещены Page Object Model классы с константами-локаторами и взаимодействием со страницей 
+
+---
+
+### ./test
+[test/](test) : размещены тесты текстового поиска, поиска по изображению, позитивный и негативные сценарии.  
+[test/pytest.ini](test/pytest.ini) : конфигурация pytest  
+[test/conftest.py](test/conftest.py) : pytest-hook для  allure и playwright интеграций    
+
+[test/asset](test/asset) : файлы, используемые в негативных тестовых сценариях   
+[test/data](test/data) : тестовые данные и константы для сценариев текстового поиска  
+
+---
+
+
+### ./utils
+[utils](utils) : содержит скрипт для нормализации строк при генерации имён файлов в Windows
