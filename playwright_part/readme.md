@@ -39,13 +39,13 @@
 ---
 ## Схема директории
 
-### ./
+### ./  
 [test_task.md](test_task.md) - тестовое задание  
-[requirements-pw.txt](requirements-pw.txt) - зависимости директории `playwright_part`
+[requirements-pw.txt](requirements-pw.txt) - зависимости директории `playwright_part`  
 ---
 
 ### ./pages
-[pages](pages) : размещены Page Object Model классы с константами-локаторами и взаимодействием со страницей 
+[pages](pages) : размещены Page Object Model классы с константами-локаторами и взаимодействием со страницей  
 
 ---
 
@@ -61,4 +61,4 @@
 
 
 ### ./utils
-[utils](utils) : содержит скрипт для нормализации строк при генерации имён файлов в Windows
+[utils](utils) : содержит скрипт для нормализации строк при генерации имён файлов в Windows  
