@@ -1,0 +1,13 @@
+*
+!.gitignore
+!requirements-dev.txt
+!*.md
+!appium_part/
+!appium_part/**
+!playwright_part/
+!playwright_part/**
+.playwright-artifacts/
+artifacts/
+allure-report/
+allure-results/
+__pycache__/
