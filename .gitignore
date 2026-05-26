@@ -11,3 +11,4 @@ artifacts/
 allure-report/
 allure-results/
 __pycache__/
+test-results/
