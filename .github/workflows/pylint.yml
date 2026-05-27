@@ -1,0 +1,26 @@
+name: linting
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.13"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt -r playwright_part/requirements-pw.txt
+    - name: linting PW-part with black
+      run: 
+        black --check playwright_part/
+    - name: linting PW-part with isort
+      run: 
+        isort --check-only playwright_part/
+    - name: linting PW-part with pylint
+      run: 
+        pylint playwright_part/
