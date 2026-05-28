@@ -12,3 +12,5 @@ allure-report/
 allure-results/
 __pycache__/
 test-results/
+!.github/
+!.github/**

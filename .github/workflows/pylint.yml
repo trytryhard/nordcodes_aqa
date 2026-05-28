@@ -14,7 +14,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt -r playwright_part/requirements-pw.txt
+        pip install -r requirements-dev.txt -r playwright_part/requirements-pw.txt -r appium_part/requirements-appium.txt
     - name: linting PW-part with black
       run: 
         black --check playwright_part/
@@ -24,3 +24,12 @@ jobs:
     - name: linting PW-part with pylint
       run: 
         pylint playwright_part/
+    - name: linting appium-part with black
+      run:
+        black --check appium_part/
+    - name: linting appium-part with isort
+      run:
+        isort --check-only appium_part/
+    - name: linting appium-part with pylint
+      run:
+        pylint appium_part/
